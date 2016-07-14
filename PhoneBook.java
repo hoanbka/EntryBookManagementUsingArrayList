@@ -92,7 +92,7 @@ public class PhoneBook {
 	}
 
 	public boolean editEntryByNumber(String oldNumber, String newNumber) {
-		if (isDuplicateNumber(oldNumber)) {
+		if (isDuplicateNumber(oldNumber)&&!isDuplicateNumber(newNumber)) {
 			for (int i = 0; i < phoneEntries.size(); i++) {
 				if (phoneEntries.get(i).getPhoneNumber().equals(oldNumber)) {
 					phoneEntries.get(i).setPhoneNumber(newNumber);
