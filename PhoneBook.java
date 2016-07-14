@@ -46,7 +46,7 @@ public class PhoneBook {
 	}
 
 	public boolean deleteEntry(String entryName) {
-		if (!isDuplicateNumber(entryName)) {
+		if (!isDuplicateName(entryName)) {
 			return false;
 		} else {
 			for (int i = 0; i < phoneEntries.size(); i++) {
